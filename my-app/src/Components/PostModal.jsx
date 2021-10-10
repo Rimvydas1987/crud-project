@@ -12,7 +12,6 @@ function Modal({id, crud, data}) {
             setBody(e.target.value);
         }
     }
-
     useEffect(() => {
         setTitle(data.title);
         setBody(data.body);

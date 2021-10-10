@@ -25,17 +25,6 @@ function NewPost({add}) {
         add(data);
     }
 
-    const doEdit = () => {
-        
-        const data = {
-            'title': title,
-            'body': body
-        }
-        setTitle('');
-        setBody('');
-        add(data);
-    }
-
     return (
         <>
         <div className="new-post">

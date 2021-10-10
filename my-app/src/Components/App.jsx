@@ -71,7 +71,7 @@ function App() {
         </div>
         <PostModal crud={crud} id={open} data={modalPost.current}/>
     </div>);
-    }
+}
     
 export default App;
 

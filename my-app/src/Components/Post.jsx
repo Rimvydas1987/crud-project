@@ -6,14 +6,14 @@ function Post({data, crud}) {
             <div className="id">{data.id}</div>
             <div className="title">{data.title}</div>
             <div className="body">{data.body}</div>
-            <div>
+            <div className="edit">
                 <h3>Edit</h3>
-                <button className='del' onClick={()=>crud.delete(data.id)}>Delete</button>
-            </div>
-           
-        </div>
-    )
 
+                <button className="del" onClick={()=>crud.delete(data.id)}>Delete</button>
+                <button className="del" onClick={()=>crud.open(data)}>Edit</button>
+            </div>
+        </div>
+    );
 }
 
-export default Post
+export default Post;

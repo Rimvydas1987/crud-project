@@ -37,14 +37,18 @@ function NewPost({add}) {
     }
 
     return (
+        <>
         <div className="new-post">
-            <div><span>Title: </span><input type="text" onChange={(e)=>controller(e, 'title')} value={title} /></div>
-            <div><span>Body: </span><textarea onChange={(e)=>controller(e, 'body')} value={body}/></div>
-            <button className='add' onClick={doAdd}>Add</button>
+            <div><span>Title:</span><input type="text" onChange={(e)=>controller(e,'title')} value={title} /></div>
         </div>
-           
-    )
-
+        <div className="new-post">
+            <div><span>Body:</span><textarea onChange={(e)=>controller(e,'body')} value={body}></textarea></div>
+        </div>
+        <div className="new-post">
+            <button className="add" onClick={doAdd}>Add</button>
+        </div>
+        </>
+    );
 }
 
-export default NewPost
+export default NewPost;

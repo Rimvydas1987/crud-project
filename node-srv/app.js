@@ -27,26 +27,10 @@ con.connect(err => {
     console.log('Yes, pasiseke');
 })
 
-
-/* app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
-app.get('/labas', (req, res) => {
-    res.send('Labas Antanai!')
-  })
-
-  app.get('/labas/:id', (req, res) => {
-    res.send(`Pats tu ${req.params.id}`)
-  }) */
-
-
 //iraso nauja posta
-
 
 /* INSERT INTO table_name (column1, column2, column3,...)
 VALUES (value1, value2, value3,...) */
-
 
   app.post('/posts', (req, res) => {
     const sql = `
@@ -99,25 +83,15 @@ app.put('/posts/:id', (req, res) => {
 })
 
 
-
-
-
 //rodo visus postus
 app.get('/posts', (req, res) => {
     con.query('SELECT * FROM posts ORDER BY id DESC', (err, results) => {
         if (err) {
             throw err;
         }
-/*         res.append('Access-Control-Allow-Origin', ['*']);
-        res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-        res.append('Access-Control-Allow-Headers', 'Content-Type'); */
-
         res.json(results);
     })
 })
-
-
-
 
 
 app.listen(port, () => {

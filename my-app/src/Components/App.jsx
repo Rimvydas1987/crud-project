@@ -59,10 +59,8 @@ function App() {
       open: openModal
   }
 
-    
     return (
     <div>
-        
         <div className="new-post-container">
             <NewPost add={doAdd} />
         </div>
@@ -74,4 +72,3 @@ function App() {
 }
     
 export default App;
-
